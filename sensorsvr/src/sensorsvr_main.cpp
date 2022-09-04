@@ -27,7 +27,7 @@ IPAddress subnet(255, 255, 255, 0);
 IPAddress primaryDNS(192, 168, 0, 1); //optional
 IPAddress secondaryDNS(192, 168, 0, 1); //optional
 
-#include "wifi_secret.h"
+#include "wifi_secret.h"  // copy the wifi_secret.h.template to wifi_secret.h with your AP data
 
 
 RTC_DATA_ATTR int bootCount = 0;
