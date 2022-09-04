@@ -23,7 +23,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/avihal}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/SimpleFTPServer}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/extlibs}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/libraries/WiFi/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/libraries/FS/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/libraries/SPIFFS/src}&quot;"/>
@@ -31,6 +31,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/libraries/FFat/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/libraries/Wire/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.cpp.sketch.input.36276114" name="CPP source files" superClass="io.sloeber.compiler.cpp.sketch.input"/>
 							</tool>
@@ -47,6 +48,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/libraries/FFat/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/libraries/Wire/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.c.sketch.input.1548749138" name="C Source Files" superClass="io.sloeber.compiler.c.sketch.input"/>
 							</tool>
@@ -61,6 +63,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/libraries/FFat/src}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/core/variant}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/core/core}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/sensorsvr/libraries/Wire/src}&quot;"/>
 								</option>
 								<inputType id="io.sloeber.compiler.S.sketch.input.535408623" name="Assembly source files" superClass="io.sloeber.compiler.S.sketch.input"/>
 							</tool>
@@ -101,7 +104,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries/**/._*|libraries/?*/utility/*/*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="libraries/Wire/doc|libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries/**/._*|libraries/?*/utility/*/*" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

@@ -6,6 +6,8 @@
 #include <WebServer.h>
 #include <FtpServer.h>
 
+#include <Adafruit_BMP085.h>
+
 #include "app_http_server.h"
 
 #include "FS.h"
@@ -35,6 +37,10 @@ RTC_DATA_ATTR int bootCount = 0;
 TGpioPin  pin_led(2, false);
 unsigned g_hbcounter = 0;
 unsigned last_hb_time = 0;
+
+TwoWire i2c_sensor = TwoWire(0);
+
+Adafruit_BMP085  bmp180;
 
 void setup()
 {
@@ -92,10 +98,26 @@ void setup()
   }
   else
   {
-    TRACE("Error initializing SPIFFS!\n");
+    TRACE("Error initializing FATFS!\n");
   }
 
   app_http_server_setup();
+
+  // BMP180 sensor init
+
+  TRACE("initializing BMP180...\n");
+  delay(100);
+
+  i2c_sensor.begin(33, 32, 100000);  // SDA pin, SCL pin, Speed
+
+  if (!bmp180.begin(BMP085_ULTRAHIGHRES, &i2c_sensor))
+  {
+    TRACE("Could not find a valid BMP180 sensor, check wiring!\n");
+  }
+  else
+  {
+    TRACE("BMP180 sensor init ok.\n");
+  }
 
   last_hb_time = 0;
 
@@ -242,6 +264,12 @@ void loop()
   {
     ++g_hbcounter;
     pin_led.SetTo(g_hbcounter & 1);
+
+    float    t_c = bmp180.readTemperature();
+    int32_t  p_pas = bmp180.readPressure();
+
+    TRACE("%u. T=%5.2f, P=%i\n", g_hbcounter, t_c, p_pas);
+
     last_hb_time = t;
   }
 

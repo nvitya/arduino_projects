@@ -66,5 +66,10 @@
 			<type>2</type>
 			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/esp32/hardware/esp32/1.0.6/libraries/WiFi</locationURI>
 		</link>
+		<link>
+			<name>libraries/Wire</name>
+			<type>2</type>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/esp32/hardware/esp32/1.0.6/libraries/Wire</locationURI>
+		</link>
 	</linkedResources>
 </projectDescription>
